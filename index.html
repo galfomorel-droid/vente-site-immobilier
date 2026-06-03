@@ -142,6 +142,9 @@
   <!-- Accessibilité : accès rapide au contenu -->
   <a class="skip-link" href="#main">Aller au contenu</a>
 
+  <!-- Texture grain (signature visuelle) -->
+  <div class="grain" aria-hidden="true"></div>
+
   <!-- Barre de progression de lecture -->
   <div class="scroll-progress" data-progress aria-hidden="true"></div>
 
@@ -176,7 +179,8 @@
     <!-- ============================================================
          HERO
     ============================================================ -->
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" aria-labelledby="hero-title" data-spotlight>
+      <div class="hero-aurora" aria-hidden="true"></div>
       <div class="hero-content">
         <p class="hero-eyebrow" data-reveal>Pour agents &amp; mandataires indépendants</p>
         <h1 id="hero-title" class="hero-title" data-words>
@@ -191,6 +195,12 @@
           <a href="#contact" class="btn-pill btn-pill-dark">Demander un devis gratuit</a>
           <a href="#realisations" class="btn-text">Voir mes réalisations <span aria-hidden="true">→</span></a>
         </div>
+        <ul class="hero-specs" data-reveal data-reveal-delay="4">
+          <li>Sur mesure</li>
+          <li>100 % responsive</li>
+          <li>SEO local inclus</li>
+          <li>Livraison 2–3 semaines</li>
+        </ul>
       </div>
       <a href="#manifeste" class="hero-scroll" aria-label="Défiler vers le bas" data-reveal data-reveal-delay="4">
         <span class="hero-scroll-line"></span>
@@ -313,7 +323,11 @@
 
         <article class="project" data-reveal>
           <div class="project-media">
-            <a href="https://www.immobilierdelapresquileguerandaise.fr/" target="_blank" rel="noopener" aria-label="Visiter le site Immobilier de la Presqu'île Guérandaise">
+            <a class="browser" data-tilt href="https://www.immobilierdelapresquileguerandaise.fr/" target="_blank" rel="noopener" aria-label="Visiter le site Immobilier de la Presqu'île Guérandaise">
+              <span class="browser-bar" aria-hidden="true">
+                <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+                <span class="browser-url">immobilierdelapresquileguerandaise.fr</span>
+              </span>
               <img src="images/presquile-guerandaise.jpg"
                    alt="Aperçu du site web immobilier de la Presqu'île Guérandaise, Le Pouliguen"
                    loading="lazy" width="1280" height="853" />

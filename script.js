@@ -140,6 +140,36 @@
     });
   }
 
+  /* ---------- Halo qui suit la souris dans le hero ---------- */
+  var heroSpot = document.querySelector('[data-spotlight]');
+  if (heroSpot && finePointer && !reduceMotion) {
+    var spotRaf = false;
+    heroSpot.addEventListener('mousemove', function (e) {
+      if (spotRaf) return;
+      spotRaf = true;
+      requestAnimationFrame(function () {
+        var r = heroSpot.getBoundingClientRect();
+        heroSpot.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        heroSpot.style.setProperty('--my', (e.clientY - r.top) + 'px');
+        spotRaf = false;
+      });
+    });
+  }
+
+  /* ---------- Inclinaison 3D des réalisations ---------- */
+  if (finePointer && !reduceMotion) {
+    document.querySelectorAll('[data-tilt]').forEach(function (el) {
+      var max = 7;
+      el.addEventListener('mousemove', function (e) {
+        var r = el.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - 0.5;
+        var py = (e.clientY - r.top) / r.height - 0.5;
+        el.style.transform = 'rotateY(' + (px * max) + 'deg) rotateX(' + (-py * max) + 'deg)';
+      });
+      el.addEventListener('mouseleave', function () { el.style.transform = ''; });
+    });
+  }
+
   /* ---------- Boutons magnétiques ---------- */
   if (finePointer && !reduceMotion) {
     document.querySelectorAll('.btn-pill').forEach(function (btn) {
@@ -156,9 +186,8 @@
     });
   }
 
-  /* ---------- Scroll : barre de progression, nav, parallaxe, manifeste ---------- */
+  /* ---------- Scroll : barre de progression, nav, manifeste ---------- */
   var progressBar = document.querySelector('[data-progress]');
-  var parallaxImgs = document.querySelectorAll('.project-media img');
   var toTop = document.querySelector('[data-to-top]');
   var ticking = false;
 
@@ -185,17 +214,6 @@
         var h = document.documentElement.scrollHeight - window.innerHeight;
         var p = h > 0 ? y / h : 0;
         progressBar.style.transform = 'scaleX(' + p + ')';
-      }
-
-      // Parallaxe des visuels
-      if (!reduceMotion) {
-        var vh = window.innerHeight;
-        parallaxImgs.forEach(function (img) {
-          var r = img.getBoundingClientRect();
-          if (r.bottom < 0 || r.top > vh) return;
-          var offset = ((r.top + r.height / 2) - vh / 2) / vh; // -0.5..0.5
-          img.style.transform = 'translateY(' + (offset * -22) + 'px) scale(1.06)';
-        });
       }
 
       // Manifeste

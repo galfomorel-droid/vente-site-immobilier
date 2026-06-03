@@ -213,10 +213,64 @@ h1, h2, h3, h4 { font-weight: 600; line-height: 1.05; letter-spacing: -0.035em; 
   padding: 120px 28px 80px;
   position: relative;
   background:
+    radial-gradient(360px circle at var(--mx, 50%) var(--my, 28%), rgba(20, 32, 56, 0.07), transparent 65%),
     radial-gradient(80% 50% at 50% 0%, #fbfbfd 0%, var(--white) 60%);
   overflow: hidden;
 }
-.hero-content { max-width: 940px; }
+.hero-content { max-width: 940px; position: relative; z-index: 2; }
+
+/* Aurora animée en fond du hero */
+.hero-aurora {
+  position: absolute;
+  inset: -25%;
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(75px);
+  opacity: 0.55;
+  background:
+    radial-gradient(28% 28% at 24% 32%, #e7edf7 0%, transparent 70%),
+    radial-gradient(26% 26% at 76% 30%, #efeee8 0%, transparent 70%),
+    radial-gradient(24% 24% at 62% 70%, #eaf1ef 0%, transparent 70%);
+  animation: auroraDrift 20s ease-in-out infinite alternate;
+}
+@keyframes auroraDrift {
+  from { transform: translate3d(-3%, -2%, 0) scale(1); }
+  to   { transform: translate3d(4%, 3%, 0) scale(1.12); }
+}
+.hero-scroll { z-index: 2; }
+
+/* Bandeau de specs (réassurance / preuve d'expertise) */
+.hero-specs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 44px;
+}
+.hero-specs li {
+  position: relative;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--grey-400);
+  padding: 0 20px;
+}
+.hero-specs li:not(:last-child)::after {
+  content: "";
+  position: absolute; right: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 1px; height: 12px;
+  background: var(--grey-200);
+}
+
+/* Grain — texture fine sur tout le site */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.038;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
 .hero-eyebrow {
   font-size: clamp(0.95rem, 1.6vw, 1.1rem);
   color: var(--grey-600);
@@ -398,15 +452,45 @@ h1, h2, h3, h4 { font-weight: 600; line-height: 1.05; letter-spacing: -0.035em; 
 .project + .project { border-top: 1px solid var(--grey-200); }
 .project-reverse { direction: rtl; }
 .project-reverse > * { direction: ltr; }
-.project-media {
-  border-radius: var(--r-lg);
+.project-media { perspective: 1200px; }
+
+/* Cadre navigateur (mockup pro) */
+.browser {
+  display: block;
+  border-radius: 16px;
   overflow: hidden;
   background: var(--white);
-  box-shadow: 0 30px 80px -40px rgba(0,0,0,0.35);
-  transition: transform 0.6s var(--ease-out);
+  border: 1px solid var(--grey-200);
+  box-shadow: 0 40px 90px -45px rgba(0,0,0,0.4);
+  transform-style: preserve-3d;
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+  will-change: transform;
 }
-.project:hover .project-media { transform: translateY(-8px); }
-.project-media img { width: 100%; height: 100%; object-fit: cover; }
+.browser:hover { box-shadow: 0 55px 110px -40px rgba(0,0,0,0.45); }
+.browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 42px;
+  padding: 0 16px;
+  background: #f5f5f7;
+  border-bottom: 1px solid var(--grey-200);
+}
+.browser-dot { width: 11px; height: 11px; border-radius: 50%; background: var(--grey-200); }
+.browser-dot:nth-child(1) { background: #ff5f57; }
+.browser-dot:nth-child(2) { background: #febc2e; }
+.browser-dot:nth-child(3) { background: #28c840; }
+.browser-url {
+  margin-left: 12px;
+  font-size: 0.78rem;
+  color: var(--grey-600);
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: 7px;
+  padding: 4px 16px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.browser img { display: block; width: 100%; height: auto; }
 .project-tag { font-size: 0.85rem; color: var(--grey-400); font-weight: 500; margin-bottom: 16px; }
 .project-info h3 { font-size: clamp(1.7rem, 3.2vw, 2.5rem); margin-bottom: 16px; letter-spacing: -0.035em; }
 .project-desc { font-size: 1.1rem; line-height: 1.55; color: var(--grey-600); margin-bottom: 26px; }
@@ -780,6 +864,8 @@ h1, h2, h3, h4 { font-weight: 600; line-height: 1.05; letter-spacing: -0.035em; 
   .marquee-track { animation: none !important; }
   .manifesto-text .mw { color: #fff !important; }
   .scroll-progress { display: none; }
+  .hero-aurora { animation: none !important; }
+  .browser { transform: none !important; }
 }
 
 /* =================================================================

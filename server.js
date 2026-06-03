@@ -140,9 +140,12 @@ function serveStatic(req, res) {
     }
     fs.readFile(filePath, function (e3, data) {
       if (e3) { res.writeHead(404); res.end('Not found'); return; }
+      var ext = path.extname(filePath).toLowerCase();
+      var alwaysFresh = (ext === '.html' || ext === '.css' || ext === '.js');
       res.writeHead(200, {
-        'Content-Type': TYPES[path.extname(filePath).toLowerCase()] || 'application/octet-stream',
-        'Cache-Control': filePath.endsWith('.html') ? 'no-cache' : 'public, max-age=3600'
+        'Content-Type': TYPES[ext] || 'application/octet-stream',
+        // Code toujours frais ; médias (images, icônes) mis en cache 1 jour.
+        'Cache-Control': alwaysFresh ? 'no-cache' : 'public, max-age=86400'
       });
       res.end(data);
     });
