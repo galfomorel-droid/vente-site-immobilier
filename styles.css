@@ -518,7 +518,7 @@ h1, h2, h3, h4 { font-weight: 600; line-height: 1.05; letter-spacing: -0.035em; 
   width: 100%;
   aspect-ratio: 5 / 6;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 22%;
 }
 /* Repli si la photo n'est pas encore déposée */
 .about-portrait.no-photo img { display: none; }
