@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Création Site Immobilier">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Création de site immobilier">
   <rect width="1200" height="630" fill="#0a0a0b"/>
   <text x="80" y="120" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="500" letter-spacing="1" fill="#a1a1a6">CRÉATION&#160;SITE&#160;IMMOBILIER</text>
-  <text x="76" y="320" font-family="Inter, Arial, sans-serif" font-size="88" font-weight="700" letter-spacing="-4" fill="#ffffff">Votre vitrine immobilière,</text>
-  <text x="76" y="425" font-family="Inter, Arial, sans-serif" font-size="88" font-weight="700" letter-spacing="-4" fill="#ffffff">en ligne et bien référencée.</text>
-  <text x="80" y="540" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="400" fill="#a1a1a6">Vos annonces mises en valeur · Visible sur Google · Agents &amp; mandataires.</text>
-  <rect x="80" y="575" width="120" height="4" rx="2" fill="#ffffff"/>
+  <text x="76" y="320" font-family="Inter, Arial, sans-serif" font-size="74" font-weight="700" letter-spacing="-3" fill="#ffffff">Création de site immobilier,</text>
+  <text x="76" y="412" font-family="Inter, Arial, sans-serif" font-size="74" font-weight="700" letter-spacing="-3" fill="#ffffff">élégant et bien référencé.</text>
+  <text x="80" y="528" font-family="Inter, Arial, sans-serif" font-size="29" font-weight="400" fill="#a1a1a6">Vos annonces mises en valeur · Visible sur Google · Agents &amp; mandataires.</text>
+  <rect x="80" y="565" width="120" height="4" rx="2" fill="#ffffff"/>
 </svg>
