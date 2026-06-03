@@ -629,7 +629,7 @@ h1, h2, h3, h4 { font-weight: 600; line-height: 1.05; letter-spacing: -0.035em; 
 .footer { background: var(--black); color: rgba(255,255,255,0.6); border-top: 1px solid rgba(255,255,255,0.1); }
 .footer-inner {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 48px;
   padding-top: 80px;
   padding-bottom: 56px;
