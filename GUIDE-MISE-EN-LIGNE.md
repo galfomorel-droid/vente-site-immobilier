@@ -14,16 +14,24 @@ Tout est déjà préparé. Il te reste essentiellement à **te connecter** et à
 
 Ouvre le **Terminal** (app macOS), puis copie-colle :
 
+**Le plus simple — un seul script :**
 ```bash
 cd ~/Desktop/site-immobilier
-railway login      # ➜ ouvre le navigateur : connecte-toi / crée ton compte Railway
-railway init       # ➜ donne un nom au projet (ex. creationsiteimmobilier)
-railway up         # ➜ déploie : Railway installe et lance le serveur
-railway domain     # ➜ génère une URL publique (xxxx.up.railway.app)
+bash deploy-railway.sh
+```
+Il enchaîne connexion + création du projet + déploiement + URL publique.
+
+**Ou manuellement, commande par commande :**
+```bash
+cd ~/Desktop/site-immobilier
+npx @railway/cli login      # ➜ ouvre le navigateur : connecte-toi / crée ton compte
+npx @railway/cli init       # ➜ donne un nom au projet (ex. creationsiteimmobilier)
+npx @railway/cli up         # ➜ déploie : Railway installe et lance le serveur
+npx @railway/cli domain     # ➜ génère une URL publique (xxxx.up.railway.app)
 ```
 
 ➡️ Ton site est **en ligne** sur l'URL affichée. 🎉
-*(Railway CLI est normalement déjà installé. Sinon : `npm i -g @railway/cli`.)*
+*(`npx` télécharge le CLI à la volée — aucune installation requise.)*
 
 ---
 

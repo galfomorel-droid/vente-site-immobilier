@@ -13,11 +13,14 @@ npm start        # http://localhost:4173
 
 ### Option A — Railway CLI (la plus rapide, sans GitHub)
 ```bash
-npm i -g @railway/cli   # déjà installé pour vous si possible
-railway login           # ouvre le navigateur
-railway init            # crée le projet
-railway up              # déploie ce dossier
-railway domain          # génère une URL publique
+bash deploy-railway.sh   # tout-en-un (login + init + up + domain)
+```
+Ou manuellement (npx, sans installation globale) :
+```bash
+npx @railway/cli login
+npx @railway/cli init
+npx @railway/cli up
+npx @railway/cli domain
 ```
 
 ### Option B — via GitHub

@@ -1,23 +1,26 @@
 #!/usr/bin/env bash
-# Déploiement Railway en une commande : bash deploy-railway.sh
+# Déploiement Railway en une commande :  bash deploy-railway.sh
+# Utilise npx (aucune installation globale nécessaire).
 set -e
 cd "$(dirname "$0")"
 
-if ! command -v railway >/dev/null 2>&1; then
-  echo "→ Installation du CLI Railway..."
-  npm i -g @railway/cli
+# Utilise le railway global s'il existe, sinon npx.
+if command -v railway >/dev/null 2>&1; then
+  RW="railway"
+else
+  RW="npx --yes @railway/cli@latest"
 fi
 
 echo "→ Connexion à Railway (ouvre le navigateur)..."
-railway whoami >/dev/null 2>&1 || railway login
+$RW whoami >/dev/null 2>&1 || $RW login
 
 echo "→ Initialisation du projet (si nécessaire)..."
-railway status >/dev/null 2>&1 || railway init
+$RW status >/dev/null 2>&1 || $RW init
 
-echo "→ Déploiement..."
-railway up
+echo "→ Déploiement du dossier courant..."
+$RW up
 
 echo "→ Génération d'une URL publique..."
-railway domain || true
+$RW domain || true
 
 echo "✅ Terminé. Ouvre l'URL affichée ci-dessus."
