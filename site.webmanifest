@@ -1,0 +1,13 @@
+{
+  "name": "Création Site Immobilier",
+  "short_name": "CSI",
+  "description": "Création de sites web vitrine pour agents et mandataires immobiliers.",
+  "lang": "fr",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0a0a0b",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

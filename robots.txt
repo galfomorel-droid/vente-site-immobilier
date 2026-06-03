@@ -1,0 +1,8 @@
+# robots.txt — creationsiteimmobilier.fr
+User-agent: *
+Allow: /
+
+# Bloque rien d'utile au référencement
+Disallow:
+
+Sitemap: https://creationsiteimmobilier.fr/sitemap.xml

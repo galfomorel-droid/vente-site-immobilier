@@ -1,0 +1,15 @@
+{
+  "name": "creationsiteimmobilier",
+  "version": "1.0.0",
+  "description": "Site vitrine — Création de sites web pour agents et mandataires immobiliers.",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
+}
