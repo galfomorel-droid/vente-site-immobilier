@@ -805,7 +805,7 @@ h1, h2, h3, h4 { font-weight: 600; line-height: 1.05; letter-spacing: -0.035em; 
 .footer { background: var(--black); color: rgba(255,255,255,0.6); border-top: 1px solid rgba(255,255,255,0.1); }
 .footer-inner {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 1.6fr 1fr 1fr 1.3fr;
   gap: 48px;
   padding-top: 80px;
   padding-bottom: 56px;
@@ -1449,3 +1449,125 @@ h1, h2, h3, h4 { font-weight: 600; line-height: 1.05; letter-spacing: -0.035em; 
   font-weight: 500;
 }
 .error-nav a:hover { color: var(--ink); }
+
+/* =================================================================
+   RESPONSIVE — Tablette (≤ 960px)
+   Évite que les grilles 3 colonnes passent direct à 1 col en 720px.
+================================================================= */
+@media (max-width: 960px) and (min-width: 721px) {
+  /* Tarifs en 2 colonnes (le 3e passe en pleine largeur) */
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+  .price-card-featured { transform: none; }
+  .price-card:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: 520px;
+    justify-self: center;
+  }
+
+  /* Témoignages en 2 colonnes */
+  .testi-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+  .testi:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: 520px;
+    justify-self: center;
+  }
+
+  /* Footer en 2 colonnes (la marque sur toute la largeur) */
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+  .footer-brand { grid-column: 1 / -1; }
+}
+
+/* =================================================================
+   RESPONSIVE — Très petits écrans (≤ 380px)
+================================================================= */
+@media (max-width: 380px) {
+  .wrap { padding: 0 20px; }
+  .hero-title { font-size: clamp(2rem, 9vw, 3rem); }
+  .section-title { font-size: clamp(1.6rem, 7vw, 2.4rem); }
+  .price-amount { font-size: 2.1rem; }
+  .nav-inner { padding: 0 20px; }
+  .blog-card { padding: 24px 22px; }
+  .blog-card h2 { font-size: 1.2rem !important; }
+}
+
+/* =================================================================
+   ACCESSIBILITÉ — Touch targets minimum 44x44 (iOS / WCAG)
+================================================================= */
+.nav-burger {
+  width: 44px;
+  height: 44px;
+}
+.to-top {
+  min-width: 44px;
+  min-height: 44px;
+}
+.btn-pill {
+  min-height: 44px;
+}
+.faq-item summary {
+  min-height: 44px;
+  padding: 14px 22px;
+}
+
+/* =================================================================
+   ACCESSIBILITÉ — Focus states clavier (visibles)
+================================================================= */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+.btn-pill:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+.skip-link:focus {
+  outline-offset: 0;
+}
+
+/* =================================================================
+   PERFORMANCE — Évite layout shift pendant chargement images
+================================================================= */
+img, picture, source { max-width: 100%; height: auto; }
+.project-media picture { display: block; }
+
+/* =================================================================
+   POLISH — Card pricing : badge ne déborde pas
+================================================================= */
+.pricing-grid { padding-top: 22px; }
+.price-card { overflow: visible; }
+
+/* =================================================================
+   IMPRESSION — Style print propre
+================================================================= */
+@media print {
+  .nav, .footer, .scroll-progress, .to-top, .grain, .hero-aurora,
+  .marquee, .hero-scroll, .skip-link, .nav-burger,
+  .hero-actions, .local-cta, .btn-pill {
+    display: none !important;
+  }
+  body { font-size: 11pt; line-height: 1.4; color: #000; background: #fff; }
+  a { color: #000; text-decoration: underline; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
+  .section { padding: 16pt 0; }
+  h1, h2, h3 { page-break-after: avoid; }
+  p { orphans: 3; widows: 3; }
+}
+
+/* =================================================================
+   DARK MODE — Adapter le contraste (optionnel)
+================================================================= */
+@media (prefers-color-scheme: dark) {
+  /* Site reste en mode light — design Apple-like volontaire.
+     Pas d'override forcé : on garde la cohérence éditoriale. */
+}
