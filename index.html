@@ -56,7 +56,7 @@
   <!-- Performance / polices (préchargements ciblés) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="image" href="images/presquile-guerandaise.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="images/presquile-guerandaise.webp" type="image/webp" fetchpriority="high" />
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 
@@ -282,10 +282,10 @@
       </a>
 
       <nav class="nav-links" aria-label="Navigation principale">
-        <a href="#pourquoi">Pourquoi un site</a>
         <a href="#realisations">Réalisations</a>
         <a href="#tarifs">Tarifs</a>
         <a href="#temoignages">Avis</a>
+        <a href="blog.html">Blog</a>
         <a href="#faq">FAQ</a>
       </nav>
 
@@ -439,9 +439,12 @@
                 <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
                 <span class="browser-url">immobilierdelapresquileguerandaise.fr</span>
               </span>
-              <img src="images/presquile-guerandaise.jpg"
-                   alt="Aperçu du site web immobilier de la Presqu'île Guérandaise, Le Pouliguen"
-                   fetchpriority="high" decoding="async" width="1280" height="853" />
+              <picture>
+                <source srcset="images/presquile-guerandaise.webp" type="image/webp" />
+                <img src="images/presquile-guerandaise.jpg"
+                     alt="Aperçu du site web immobilier de la Presqu'île Guérandaise, Le Pouliguen"
+                     fetchpriority="high" decoding="async" width="1280" height="853" />
+              </picture>
             </a>
           </div>
           <div class="project-info">
@@ -459,9 +462,12 @@
                 <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
                 <span class="browser-url">immobiliersabolien.fr</span>
               </span>
-              <img src="images/immobilier-sabolien.jpg"
-                   alt="Aperçu du site web L'Immobilier Sabolien à Sablé-sur-Sarthe"
-                   loading="lazy" width="1280" height="853" />
+              <picture>
+                <source srcset="images/immobilier-sabolien.webp" type="image/webp" />
+                <img src="images/immobilier-sabolien.jpg"
+                     alt="Aperçu du site web L'Immobilier Sabolien à Sablé-sur-Sarthe"
+                     loading="lazy" decoding="async" width="1280" height="853" />
+              </picture>
             </a>
           </div>
           <div class="project-info">
@@ -484,9 +490,12 @@
     <section class="section about" id="apropos" aria-labelledby="about-title">
       <div class="wrap about-grid">
         <figure class="about-portrait" data-reveal>
-          <img src="images/charles-morel.jpg"
-               alt="Charles Morel, agent immobilier et créateur de sites web pour l'immobilier"
-               width="860" height="1075" loading="lazy" />
+          <picture>
+            <source srcset="images/charles-morel.webp" type="image/webp" />
+            <img src="images/charles-morel.jpg"
+                 alt="Charles Morel, agent immobilier et créateur de sites web pour l'immobilier"
+                 width="860" height="1075" loading="lazy" decoding="async" />
+          </picture>
           <figcaption class="about-caption">
             <span class="about-name">Charles Morel</span>
             <span class="about-role">Agent immobilier &amp; créateur de sites</span>
@@ -860,14 +869,21 @@
       <div class="footer-col">
         <h4>Navigation</h4>
         <ul>
-          <li><a href="#pourquoi">Pourquoi un site</a></li>
           <li><a href="#realisations">Réalisations</a></li>
           <li><a href="#tarifs">Tarifs</a></li>
           <li><a href="#temoignages">Avis clients</a></li>
           <li><a href="#apropos">À propos</a></li>
           <li><a href="#faq">Questions fréquentes</a></li>
-          <li><a href="#guide">En savoir plus</a></li>
+          <li><a href="blog.html">Blog</a></li>
           <li><a href="#contact">Devis gratuit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Spécialités</h4>
+        <ul>
+          <li><a href="creation-site-immobilier-sable-sur-sarthe.html">Site immobilier Sablé-sur-Sarthe</a></li>
+          <li><a href="creation-site-immobilier-loire-atlantique.html">Site immobilier Loire-Atlantique</a></li>
+          <li><a href="creation-site-mandataire-immobilier.html">Site pour mandataire (IAD, SAFTI…)</a></li>
         </ul>
       </div>
     </div>
