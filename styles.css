@@ -563,6 +563,19 @@ h1, h2, h3, h4 { font-weight: 600; line-height: 1.05; letter-spacing: -0.035em; 
   color: var(--ink); font-weight: 700;
 }
 
+/* Ligne « Plus de 10 sites » sous les réalisations */
+.work-more {
+  text-align: center;
+  margin-top: 64px;
+  padding-top: 52px;
+  border-top: 1px solid var(--grey-200);
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+.work-more strong { font-weight: 600; color: var(--ink); white-space: nowrap; }
+
 /* =================================================================
    PROCESSUS
 ================================================================= */
