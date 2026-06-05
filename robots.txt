@@ -5,4 +5,4 @@ Allow: /
 # Bloque rien d'utile au référencement
 Disallow:
 
-Sitemap: https://creationsiteimmobilier.fr/sitemap.xml
+Sitemap: https://www.creationsiteimmobilier.fr/sitemap.xml
