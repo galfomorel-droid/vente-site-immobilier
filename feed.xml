@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Blog — Création Site Immobilier</title>
+    <link>https://www.creationsiteimmobilier.fr/blog.html</link>
+    <atom:link href="https://www.creationsiteimmobilier.fr/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Conseils, guides et bonnes pratiques pour les agents et mandataires immobiliers : référencement Google, design web, conversion, prospection digitale.</description>
+    <language>fr-FR</language>
+    <copyright>© Charles Morel — Création Site Immobilier</copyright>
+    <lastBuildDate>Thu, 05 Jun 2026 09:00:00 +0200</lastBuildDate>
+    <generator>Charles Morel</generator>
+    <image>
+      <url>https://www.creationsiteimmobilier.fr/og-cover.png</url>
+      <title>Création Site Immobilier</title>
+      <link>https://www.creationsiteimmobilier.fr/</link>
+    </image>
+
+    <item>
+      <title>Pourquoi tout agent immobilier doit avoir un site internet en 2026</title>
+      <link>https://www.creationsiteimmobilier.fr/blog/pourquoi-site-internet-agent-immobilier.html</link>
+      <guid isPermaLink="true">https://www.creationsiteimmobilier.fr/blog/pourquoi-site-internet-agent-immobilier.html</guid>
+      <description>Les 7 raisons concrètes pour lesquelles ne pas avoir de site personnel coûte chaque mois des mandats aux agents et mandataires immobiliers.</description>
+      <dc:creator>Charles Morel</dc:creator>
+      <pubDate>Thu, 05 Jun 2026 09:00:00 +0200</pubDate>
+      <category>SEO &amp; Visibilité</category>
+    </item>
+
+    <item>
+      <title>Comment apparaître en première page de Google sur votre commune</title>
+      <link>https://www.creationsiteimmobilier.fr/blog/referencement-local-immobilier-google.html</link>
+      <guid isPermaLink="true">https://www.creationsiteimmobilier.fr/blog/referencement-local-immobilier-google.html</guid>
+      <description>Guide complet du référencement local pour agents immobiliers : fiche Google Business, mots-clés, contenu et backlinks locaux.</description>
+      <dc:creator>Charles Morel</dc:creator>
+      <pubDate>Thu, 05 Jun 2026 09:00:00 +0200</pubDate>
+      <category>Référencement local</category>
+    </item>
+
+    <item>
+      <title>Combien coûte un site internet immobilier en 2026 ? Le vrai prix sans détour</title>
+      <link>https://www.creationsiteimmobilier.fr/blog/prix-site-internet-immobilier.html</link>
+      <guid isPermaLink="true">https://www.creationsiteimmobilier.fr/blog/prix-site-internet-immobilier.html</guid>
+      <description>De 1 000 € à 10 000 € : explication transparente des écarts de prix et conseils pour éviter les pièges.</description>
+      <dc:creator>Charles Morel</dc:creator>
+      <pubDate>Thu, 05 Jun 2026 09:00:00 +0200</pubDate>
+      <category>Tarifs</category>
+    </item>
+
+  </channel>
+</rss>

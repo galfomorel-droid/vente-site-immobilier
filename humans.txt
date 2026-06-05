@@ -1,0 +1,12 @@
+/* TEAM */
+Conception & développement : Charles Morel
+Email : contact@creationsiteimmobilier.fr
+Téléphone : 06 38 55 53 55
+Localisation : Sablé-sur-Sarthe, France
+
+/* SITE */
+Dernière mise à jour : 2026-06-05
+Standards : HTML5, CSS3, JavaScript ES6
+Composants : 100 % sur mesure — aucun framework
+Hébergement : Railway
+Polices : Inter (Google Fonts), Caveat
