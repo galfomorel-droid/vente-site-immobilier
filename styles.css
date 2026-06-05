@@ -545,6 +545,14 @@ h1, h2, h3, h4 { font-weight: 600; line-height: 1.05; letter-spacing: -0.035em; 
   margin-top: 10px;
 }
 .about-text .section-title { margin-top: 14px; }
+.about-bio { margin-top: 26px; }
+.about-bio p {
+  font-size: 1.08rem;
+  line-height: 1.65;
+  color: var(--grey-600);
+  letter-spacing: -0.01em;
+}
+.about-bio p + p { margin-top: 18px; }
 .about-points {
   display: grid;
   grid-template-columns: 1fr 1fr;
