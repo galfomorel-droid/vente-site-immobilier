@@ -119,6 +119,14 @@ function handleContact(req, res) {
   });
 }
 
+/* ---------- Page 404 soignée ---------- */
+function send404(res) {
+  fs.readFile(path.join(ROOT, '404.html'), function (err, data) {
+    res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-cache' });
+    res.end(err ? '<h1>404 — Page introuvable</h1>' : data);
+  });
+}
+
 /* ---------- Fichiers statiques ---------- */
 function serveStatic(req, res) {
   let urlPath = decodeURIComponent(req.url.split('?')[0]);
@@ -133,20 +141,38 @@ function serveStatic(req, res) {
     if (err || stat.isDirectory()) {
       const alt = filePath.replace(/\/$/, '') + '.html';
       return fs.readFile(alt, function (e2, data) {
-        if (e2) { res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' }); res.end('<h1>404 — Page introuvable</h1>'); return; }
+        if (e2) { return send404(res); }
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
         res.end(data);
       });
     }
     fs.readFile(filePath, function (e3, data) {
-      if (e3) { res.writeHead(404); res.end('Not found'); return; }
+      if (e3) { return send404(res); }
       var ext = path.extname(filePath).toLowerCase();
       var alwaysFresh = (ext === '.html' || ext === '.css' || ext === '.js');
-      res.writeHead(200, {
+      var headers = {
         'Content-Type': TYPES[ext] || 'application/octet-stream',
-        // Code toujours frais ; médias (images, icônes) mis en cache 1 jour.
-        'Cache-Control': alwaysFresh ? 'no-cache' : 'public, max-age=86400'
-      });
+        'Cache-Control': alwaysFresh ? 'no-cache' : 'public, max-age=86400',
+        // Sécurité
+        'X-Content-Type-Options': 'nosniff',
+        'X-Frame-Options': 'SAMEORIGIN',
+        'Referrer-Policy': 'strict-origin-when-cross-origin',
+        'Permissions-Policy': 'geolocation=(), camera=(), microphone=(), payment=()',
+        'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+      };
+      if (ext === '.html') {
+        headers['Content-Security-Policy'] =
+          "default-src 'self'; " +
+          "script-src 'self'; " +
+          "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
+          "font-src 'self' https://fonts.gstatic.com; " +
+          "img-src 'self' data: https:; " +
+          "connect-src 'self'; " +
+          "frame-ancestors 'self'; " +
+          "form-action 'self'; " +
+          "base-uri 'self'";
+      }
+      res.writeHead(200, headers);
       res.end(data);
     });
   });

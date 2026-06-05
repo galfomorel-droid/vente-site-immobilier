@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/0.9">
+
   <url>
     <loc>https://www.creationsiteimmobilier.fr/</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.creationsiteimmobilier.fr/og-cover.png</image:loc>
+      <image:title>Création de site immobilier — pour agents et mandataires</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.creationsiteimmobilier.fr/images/presquile-guerandaise.jpg</image:loc>
+      <image:caption>Site immobilier de la Presqu'île Guérandaise</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.creationsiteimmobilier.fr/images/immobilier-sabolien.jpg</image:loc>
+      <image:caption>Site L'Immobilier Sabolien — Sablé-sur-Sarthe</image:caption>
+    </image:image>
   </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/mentions-legales.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/confidentialite.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>

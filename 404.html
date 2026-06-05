@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Page introuvable (404) | Création Site Immobilier</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .e404 {
+      min-height: 100vh; min-height: 100svh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 100px 28px;
+      background: radial-gradient(80% 50% at 50% 0%, #fbfbfd 0%, #fff 60%);
+    }
+    .e404-code { font-size: clamp(4rem, 14vw, 9rem); font-weight: 700; letter-spacing: -0.05em; line-height: 1; color: var(--ink); }
+    .e404 h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); letter-spacing: -0.035em; margin: 18px 0 14px; }
+    .e404 p { font-size: 1.1rem; color: var(--grey-600); max-width: 460px; margin: 0 auto 34px; line-height: 1.5; }
+    .e404-actions { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; }
+  </style>
+</head>
+<body>
+  <main class="e404">
+    <p class="e404-code">404</p>
+    <h1>Cette page n'existe pas.</h1>
+    <p>Le lien est peut-être erroné ou la page a été déplacée. Revenez à l'accueil pour découvrir nos créations de sites immobilier.</p>
+    <div class="e404-actions">
+      <a href="/" class="btn-pill btn-pill-dark">Retour à l'accueil</a>
+      <a href="/#contact" class="btn-text">Demander un devis <span aria-hidden="true">→</span></a>
+    </div>
+  </main>
+</body>
+</html>

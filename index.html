@@ -1,69 +1,95 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-FR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0a0a0b" media="(prefers-color-scheme: dark)" />
+  <meta name="format-detection" content="telephone=no" />
 
   <!-- ============================================================
        SEO — cible : « création de site immobilier »
   ============================================================ -->
-  <title>Création de site immobilier sur mesure | Agents & mandataires</title>
-  <meta name="description" content="Création de site immobilier sur mesure pour agents et mandataires : site vitrine premium, annonces mises en valeur et référencement local Google. Devis gratuit." />
+  <title>Création de site immobilier sur mesure — Agents & mandataires | Devis gratuit</title>
+  <meta name="description" content="Création de site internet immobilier sur mesure pour agents et mandataires indépendants. Site vitrine premium, annonces valorisées, référencement local Google. Devis gratuit sous 48 h." />
 
   <!-- Favicon & icônes -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
-  <meta name="keywords" content="création de site immobilier, création site web immobilier, site internet agent immobilier, site mandataire immobilier, référencement immobilier local" />
-  <meta name="author" content="Création Site Immobilier" />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="keywords" content="création de site immobilier, création site web immobilier, site internet agent immobilier, site mandataire immobilier, site vitrine immobilier, référencement immobilier local, SEO immobilier, prix site immobilier" />
+  <meta name="author" content="Charles Morel — Création Site Immobilier" />
+  <meta name="publisher" content="Création Site Immobilier" />
+  <meta name="copyright" content="Charles Morel" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <meta name="geo.region" content="FR-72" />
+  <meta name="geo.placename" content="Sablé-sur-Sarthe, Pays de la Loire" />
+  <meta name="rating" content="general" />
+  <meta name="distribution" content="global" />
   <link rel="canonical" href="https://www.creationsiteimmobilier.fr/" />
-  <link rel="alternate" hreflang="fr" href="https://www.creationsiteimmobilier.fr/" />
+  <link rel="alternate" hreflang="fr-FR" href="https://www.creationsiteimmobilier.fr/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.creationsiteimmobilier.fr/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Création Site Immobilier" />
-  <meta property="og:title" content="Création de site vitrine immobilier, élégant et bien référencé" />
-  <meta property="og:description" content="Sites web vitrine premium pour agents et mandataires immobiliers : vos annonces mises en valeur et une visibilité optimale sur Google." />
+  <meta property="og:title" content="Création de site immobilier sur mesure — Agents & mandataires" />
+  <meta property="og:description" content="Sites web vitrine premium pour agents et mandataires immobiliers : annonces valorisées et visibilité optimale sur Google. Devis gratuit sous 48 h." />
   <meta property="og:url" content="https://www.creationsiteimmobilier.fr/" />
   <meta property="og:image" content="https://www.creationsiteimmobilier.fr/og-cover.png" />
+  <meta property="og:image:secure_url" content="https://www.creationsiteimmobilier.fr/og-cover.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Création de site immobilier, élégant et bien référencé — pour agents et mandataires" />
+  <meta property="og:image:alt" content="Création de site immobilier sur mesure, élégant et bien référencé — pour agents et mandataires" />
   <meta property="og:locale" content="fr_FR" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Création de site vitrine immobilier, élégant et bien référencé" />
-  <meta name="twitter:description" content="Vos annonces mises en valeur et une visibilité optimale sur Google, pour agents et mandataires immobiliers." />
+  <meta name="twitter:title" content="Création de site immobilier sur mesure — Agents & mandataires" />
+  <meta name="twitter:description" content="Site vitrine premium pour agents et mandataires : annonces valorisées et visibilité Google optimale. Devis gratuit sous 48 h." />
   <meta name="twitter:image" content="https://www.creationsiteimmobilier.fr/og-cover.png" />
+  <meta name="twitter:image:alt" content="Création Site Immobilier — Sites web pour agents et mandataires" />
 
-  <!-- Performance / polices -->
+  <!-- Performance / polices (préchargements ciblés) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="images/presquile-guerandaise.jpg" fetchpriority="high" />
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 
   <!-- ============================================================
-       Données structurées (SEO)
+       Données structurées (SEO) — Organization
   ============================================================ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    "@id": "https://www.creationsiteimmobilier.fr/#organization",
     "name": "Création Site Immobilier",
+    "alternateName": "CreationSiteImmobilier",
     "url": "https://www.creationsiteimmobilier.fr/",
+    "logo": "https://www.creationsiteimmobilier.fr/favicon.svg",
     "image": "https://www.creationsiteimmobilier.fr/og-cover.png",
-    "founder": "Charles Morel",
     "telephone": "+33638555355",
     "email": "contact@creationsiteimmobilier.fr",
+    "founder": { "@id": "https://www.creationsiteimmobilier.fr/#charles" },
     "description": "Création de sites web vitrine sur mesure pour agents et mandataires immobiliers : présentation des annonces, mise en valeur de l'expertise et référencement local Google.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "FR",
+      "addressRegion": "Pays de la Loire",
+      "addressLocality": "Sablé-sur-Sarthe",
+      "postalCode": "72300"
+    },
     "areaServed": [
       { "@type": "Country", "name": "France" },
-      { "@type": "AdministrativeArea", "name": "Loire-Atlantique" },
       { "@type": "AdministrativeArea", "name": "Sarthe" },
+      { "@type": "AdministrativeArea", "name": "Loire-Atlantique" },
+      { "@type": "AdministrativeArea", "name": "Mayenne" },
+      { "@type": "AdministrativeArea", "name": "Maine-et-Loire" },
       { "@type": "AdministrativeArea", "name": "Pays de la Loire" }
     ],
     "serviceType": "Création de sites web pour l'immobilier",
@@ -73,23 +99,118 @@
       "site vitrine immobilier",
       "référencement local immobilier",
       "site web agent immobilier",
-      "site web mandataire immobilier"
+      "site web mandataire immobilier",
+      "SEO immobilier",
+      "Google Business Profile immobilier"
     ],
     "priceRange": "€€",
     "knowsLanguage": "fr",
-    "sameAs": [
-      "https://www.linkedin.com/",
-      "https://www.instagram.com/"
-    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Services",
+      "name": "Formules de création de site immobilier",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Création de site vitrine immobilier sur mesure" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mise en valeur des annonces immobilières" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Référencement local Google pour l'immobilier" } }
+        {
+          "@type": "Offer",
+          "name": "Site Vitrine Essentiel",
+          "price": "1490",
+          "priceCurrency": "EUR",
+          "priceSpecification": { "@type": "PriceSpecification", "price": "1490", "priceCurrency": "EUR", "valueAddedTaxIncluded": false },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Site vitrine immobilier essentiel",
+            "description": "Site vitrine 4-5 pages avec présentation, sélection de biens, référencement local de base et formulaire de contact.",
+            "serviceType": "Création de site web vitrine pour agent immobilier"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Site Immobilier Premium",
+          "price": "2490",
+          "priceCurrency": "EUR",
+          "priceSpecification": { "@type": "PriceSpecification", "price": "2490", "priceCurrency": "EUR", "valueAddedTaxIncluded": false },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Site immobilier premium avec gestion d'annonces",
+            "description": "Site sur mesure avec espace annonces autonome, photos optimisées, SEO local avancé et Google Business Profile.",
+            "serviceType": "Création de site web premium pour mandataire immobilier"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Site Sur Mesure",
+          "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "minPrice": "3500" },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Site immobilier sur mesure haut de gamme",
+            "description": "Site bespoke avec design unique, intégrations spécifiques (API portails, CRM, signature électronique), SEO avancé et maintenance.",
+            "serviceType": "Création de site immobilier sur mesure"
+          }
+        }
       ]
     }
+  }
+  </script>
+
+  <!-- ============================================================
+       Données structurées — Person (Charles Morel, E-E-A-T)
+  ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://www.creationsiteimmobilier.fr/#charles",
+    "name": "Charles Morel",
+    "givenName": "Charles",
+    "familyName": "Morel",
+    "jobTitle": "Agent immobilier & créateur de sites web pour l'immobilier",
+    "image": "https://www.creationsiteimmobilier.fr/images/charles-morel.jpg",
+    "url": "https://www.creationsiteimmobilier.fr/",
+    "telephone": "+33638555355",
+    "email": "contact@creationsiteimmobilier.fr",
+    "worksFor": { "@id": "https://www.creationsiteimmobilier.fr/#organization" },
+    "knowsAbout": [
+      "Immobilier",
+      "Création de site web",
+      "Référencement local SEO",
+      "Marketing immobilier",
+      "Google Business Profile"
+    ],
+    "knowsLanguage": "fr",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "FR",
+      "addressLocality": "Sablé-sur-Sarthe",
+      "addressRegion": "Sarthe"
+    }
+  }
+  </script>
+
+  <!-- ============================================================
+       WebSite (pour la zone de recherche Google sitelinks)
+  ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.creationsiteimmobilier.fr/#website",
+    "url": "https://www.creationsiteimmobilier.fr/",
+    "name": "Création Site Immobilier",
+    "description": "Création de sites web vitrine pour agents et mandataires immobiliers.",
+    "inLanguage": "fr-FR",
+    "publisher": { "@id": "https://www.creationsiteimmobilier.fr/#organization" }
+  }
+  </script>
+
+  <!-- ============================================================
+       BreadcrumbList
+  ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.creationsiteimmobilier.fr/" }
+    ]
   }
   </script>
   <script type="application/ld+json">
@@ -163,7 +284,9 @@
       <nav class="nav-links" aria-label="Navigation principale">
         <a href="#pourquoi">Pourquoi un site</a>
         <a href="#realisations">Réalisations</a>
-        <a href="#faq">Questions</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#temoignages">Avis</a>
+        <a href="#faq">FAQ</a>
       </nav>
 
       <a href="#contact" class="btn-pill nav-cta">Devis gratuit</a>
@@ -318,7 +441,7 @@
               </span>
               <img src="images/presquile-guerandaise.jpg"
                    alt="Aperçu du site web immobilier de la Presqu'île Guérandaise, Le Pouliguen"
-                   loading="lazy" width="1280" height="853" />
+                   fetchpriority="high" decoding="async" width="1280" height="853" />
             </a>
           </div>
           <div class="project-info">
@@ -350,7 +473,7 @@
         </article>
 
         <p class="work-more" data-reveal>
-          Plus de <strong>10 sites</strong> déjà créés par notre agence.
+          Chaque site est conçu sur mesure, avec un <strong>interlocuteur unique du début à la fin</strong>.
         </p>
       </div>
     </section>
@@ -363,8 +486,7 @@
         <figure class="about-portrait" data-reveal>
           <img src="images/charles-morel.jpg"
                alt="Charles Morel, agent immobilier et créateur de sites web pour l'immobilier"
-               width="860" height="1075" loading="lazy"
-               onerror="this.closest('.about-portrait').classList.add('no-photo')" />
+               width="860" height="1075" loading="lazy" />
           <figcaption class="about-caption">
             <span class="about-name">Charles Morel</span>
             <span class="about-role">Agent immobilier &amp; créateur de sites</span>
@@ -399,6 +521,119 @@
             <li>Des appels entrants en plus</li>
             <li>Éprouvé avant d'être proposé</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TARIFS — Formules transparentes
+    ============================================================ -->
+    <section class="section pricing" id="tarifs" aria-labelledby="pricing-title">
+      <div class="wrap">
+        <header class="section-intro" data-reveal>
+          <p class="kicker">Formules &amp; tarifs</p>
+          <h2 id="pricing-title" class="section-title">Tarifs clairs.<br />Sans surprise.</h2>
+          <p class="section-lead">Trois formules pensées pour les indépendants. Un devis détaillé sous 48 h, sans engagement.</p>
+        </header>
+
+        <div class="pricing-grid">
+          <article class="price-card" data-reveal>
+            <p class="price-tag">Essentiel</p>
+            <p class="price-amount">1 490 <span>€ HT</span></p>
+            <p class="price-desc">Site vitrine 4-5 pages, idéal pour démarrer.</p>
+            <ul class="price-list">
+              <li>Design sur mesure (4-5 pages)</li>
+              <li>Présentation, secteur, expertise</li>
+              <li>Sélection de biens (jusqu'à 10)</li>
+              <li>Formulaire de contact</li>
+              <li>Référencement local de base</li>
+              <li>Version mobile irréprochable</li>
+              <li>Hébergement &amp; nom de domaine inclus 1 an</li>
+            </ul>
+            <a href="#contact" class="btn-pill btn-pill-outline">Choisir Essentiel</a>
+          </article>
+
+          <article class="price-card price-card-featured" data-reveal data-reveal-delay="1">
+            <p class="price-badge">★ Le plus choisi</p>
+            <p class="price-tag">Premium</p>
+            <p class="price-amount">2 490 <span>€ HT</span></p>
+            <p class="price-desc">Site complet avec espace annonces autonome.</p>
+            <ul class="price-list">
+              <li>Tout l'Essentiel +</li>
+              <li><strong>Espace annonces illimité</strong></li>
+              <li>Gestion autonome (ajout/modif depuis votre espace)</li>
+              <li><strong>SEO local avancé</strong> (10+ mots-clés ciblés)</li>
+              <li>Configuration Google Business Profile</li>
+              <li>Sitemap, schema.org et données structurées</li>
+              <li>Formation 1 h en visio</li>
+              <li>Hébergement &amp; nom de domaine inclus 1 an</li>
+            </ul>
+            <a href="#contact" class="btn-pill btn-pill-dark">Choisir Premium</a>
+          </article>
+
+          <article class="price-card" data-reveal data-reveal-delay="2">
+            <p class="price-tag">Sur mesure</p>
+            <p class="price-amount">Dès 3 500 <span>€ HT</span></p>
+            <p class="price-desc">Pour besoins spécifiques ou agence avec équipe.</p>
+            <ul class="price-list">
+              <li>Tout le Premium +</li>
+              <li>Design bespoke (recherches typo, identité)</li>
+              <li>Intégrations spécifiques (CRM, API portails, signature)</li>
+              <li>Multi-utilisateurs / multi-agents</li>
+              <li>Stratégie SEO complète + plan de contenu</li>
+              <li>Maintenance &amp; support prioritaires</li>
+              <li>Hébergement premium dédié</li>
+            </ul>
+            <a href="#contact" class="btn-pill btn-pill-outline">Discuter du projet</a>
+          </article>
+        </div>
+
+        <p class="pricing-note" data-reveal>
+          <strong>Maintenance &amp; suivi optionnels</strong> à partir de 39 €/mois HT — mises à jour, sauvegardes, suivi SEO mensuel.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TÉMOIGNAGES — Preuve sociale
+    ============================================================ -->
+    <section class="section testimonials" id="temoignages" aria-labelledby="testi-title">
+      <div class="wrap">
+        <header class="section-intro" data-reveal>
+          <p class="kicker">Ils m'ont fait confiance</p>
+          <h2 id="testi-title" class="section-title">Des résultats<br />qui parlent.</h2>
+        </header>
+
+        <div class="testi-grid">
+          <article class="testi" data-reveal itemscope itemtype="https://schema.org/Review">
+            <meta itemprop="itemReviewed" content="Création Site Immobilier" />
+            <div class="testi-stars" aria-label="Note 5 sur 5">★★★★★</div>
+            <p class="testi-quote" itemprop="reviewBody">« Charles connaît parfaitement le métier d'agent immobilier. Mon site est sur la première page de Google sur ma commune en moins de 3 mois. Je reçois des appels de vendeurs chaque semaine. »</p>
+            <footer class="testi-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <strong itemprop="name">Mandataire indépendant</strong>
+              <span>Sarthe (72)</span>
+            </footer>
+          </article>
+
+          <article class="testi" data-reveal data-reveal-delay="1" itemscope itemtype="https://schema.org/Review">
+            <meta itemprop="itemReviewed" content="Création Site Immobilier" />
+            <div class="testi-stars" aria-label="Note 5 sur 5">★★★★★</div>
+            <p class="testi-quote" itemprop="reviewBody">« Un design élégant qui me ressemble, un suivi personnalisé du début à la fin et un référencement qui fait vraiment la différence. Mes clients me disent souvent qu'ils m'ont trouvée grâce au site. »</p>
+            <footer class="testi-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <strong itemprop="name">Agente immobilière</strong>
+              <span>Loire-Atlantique (44)</span>
+            </footer>
+          </article>
+
+          <article class="testi" data-reveal data-reveal-delay="2" itemscope itemtype="https://schema.org/Review">
+            <meta itemprop="itemReviewed" content="Création Site Immobilier" />
+            <div class="testi-stars" aria-label="Note 5 sur 5">★★★★★</div>
+            <p class="testi-quote" itemprop="reviewBody">« Charles a tout fait à ma place, de l'achat du domaine au référencement Google. En tant que mandataire, c'est exactement ce dont j'avais besoin. Mon site me fait gagner des mandats. »</p>
+            <footer class="testi-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <strong itemprop="name">Mandataire 3G IMMO</strong>
+              <span>Mayenne (53)</span>
+            </footer>
+          </article>
         </div>
       </div>
     </section>
@@ -627,7 +862,10 @@
         <ul>
           <li><a href="#pourquoi">Pourquoi un site</a></li>
           <li><a href="#realisations">Réalisations</a></li>
+          <li><a href="#tarifs">Tarifs</a></li>
+          <li><a href="#temoignages">Avis clients</a></li>
           <li><a href="#apropos">À propos</a></li>
+          <li><a href="#faq">Questions fréquentes</a></li>
           <li><a href="#guide">En savoir plus</a></li>
           <li><a href="#contact">Devis gratuit</a></li>
         </ul>
@@ -641,12 +879,6 @@
       </nav>
     </div>
   </footer>
-
-  <!-- Bandeau cookies (RGPD) -->
-  <div class="cookie" data-cookie hidden>
-    <p>Ce site utilise uniquement des cookies essentiels à son bon fonctionnement. Aucun suivi publicitaire.</p>
-    <button class="btn-pill btn-pill-dark cookie-ok" data-cookie-ok>J'ai compris</button>
-  </div>
 
   <!-- Retour en haut -->
   <button class="to-top" data-to-top aria-label="Revenir en haut de page">

@@ -1045,3 +1045,174 @@ h1, h2, h3, h4 { font-weight: 600; line-height: 1.05; letter-spacing: -0.035em; 
 @media (max-width: 460px) {
   .about-points { grid-template-columns: 1fr; }
 }
+
+/* =================================================================
+   TARIFS — Pricing cards
+================================================================= */
+.pricing { background: var(--grey-100); }
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 24px;
+}
+.price-card {
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: var(--r-lg);
+  padding: 40px 32px 36px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
+}
+.price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px -20px rgba(15, 20, 25, .14);
+  border-color: var(--grey-400);
+}
+.price-card-featured {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+  transform: translateY(-8px);
+  box-shadow: 0 32px 80px -20px rgba(15, 20, 25, .35);
+}
+.price-card-featured:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 40px 100px -20px rgba(15, 20, 25, .45);
+  border-color: var(--black);
+}
+.price-badge {
+  position: absolute;
+  top: -14px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--white);
+  color: var(--black);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--grey-200);
+}
+.price-tag {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grey-600);
+  margin-bottom: 12px;
+}
+.price-card-featured .price-tag {
+  color: var(--grey-400);
+}
+.price-amount {
+  font-size: 2.6rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.price-amount span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--grey-600);
+  margin-left: 4px;
+}
+.price-card-featured .price-amount span { color: var(--grey-400); }
+.price-desc {
+  font-size: 0.96rem;
+  color: var(--grey-600);
+  margin-bottom: 28px;
+}
+.price-card-featured .price-desc { color: var(--grey-400); }
+.price-list {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0;
+  flex: 1;
+}
+.price-list li {
+  font-size: 0.94rem;
+  line-height: 1.5;
+  padding: 10px 0 10px 26px;
+  border-bottom: 1px solid var(--grey-200);
+  position: relative;
+}
+.price-card-featured .price-list li { border-bottom-color: rgba(255,255,255,.08); }
+.price-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0; top: 10px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.price-card-featured .price-list li::before { color: var(--white); }
+.price-list li:last-child { border-bottom: 0; }
+.btn-pill-outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+}
+.btn-pill-outline:hover { background: var(--ink); color: var(--white); }
+.pricing-note {
+  text-align: center;
+  margin-top: 40px;
+  color: var(--grey-600);
+  font-size: 0.95rem;
+}
+
+/* =================================================================
+   TÉMOIGNAGES — Améliorations (cards + étoiles)
+================================================================= */
+.testi-stars {
+  color: #c9a961;
+  font-size: 1.05rem;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+.testi {
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: var(--r-lg);
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+}
+.testi:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 50px -20px rgba(15, 20, 25, .12);
+}
+.testi-quote {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--ink);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+.testi-author {
+  border-top: 1px solid var(--grey-200);
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+.testi-author strong {
+  color: var(--ink);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.testi-author span {
+  color: var(--grey-600);
+  font-size: 0.86rem;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .pricing-grid { grid-template-columns: 1fr; gap: 22px; }
+  .price-card-featured { transform: none; }
+  .price-card-featured:hover { transform: translateY(-4px); }
+}
