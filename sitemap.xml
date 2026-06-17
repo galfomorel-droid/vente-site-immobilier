@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://www.creationsiteimmobilier.fr/</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -22,53 +22,248 @@
   </url>
 
   <url>
-    <loc>https://www.creationsiteimmobilier.fr/creation-site-immobilier-sable-sur-sarthe.html</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://www.creationsiteimmobilier.fr/creation-site-immobilier-loire-atlantique.html</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
     <loc>https://www.creationsiteimmobilier.fr/creation-site-mandataire-immobilier.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.creationsiteimmobilier.fr/blog.html</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.creationsiteimmobilier.fr/reseaux.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-internet-mandataire-iad.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.creationsiteimmobilier.fr/blog/pourquoi-site-internet-agent-immobilier.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-internet-mandataire-safti.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-internet-mandataire-capifrance.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-internet-mandataire-optimhome.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-internet-mandataire-3g-immo.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-internet-mandataire-megagence.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-internet-mandataire-bsk-immobilier.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-internet-mandataire-exp-france.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-internet-mandataire-proprietes-privees.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-internet-mandataire-efficity.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-internet-mandataire-nestenn.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-internet-mandataire-stephane-plaza.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-internet-mandataire-dr-house-immo.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-internet-mandataire-la-fourmi-immo.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-immobilier-sable-sur-sarthe.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-immobilier-loire-atlantique.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-immobilier-paris-ile-de-france.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-immobilier-lyon-rhone.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-immobilier-bordeaux-gironde.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-immobilier-marseille-paca.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-immobilier-toulouse-haute-garonne.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-immobilier-rennes-bretagne.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creer-un-site-immobilier.html</loc>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-agent-commercial-immobilier.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/creation-site-agence-immobiliere.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/comparatif-wix-vs-site-immobilier-sur-mesure.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/refonte-site-internet-agent-immobilier.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/site-immobilier-pas-cher.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/exemples-modeles-sites-immobiliers.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/blog.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.creationsiteimmobilier.fr/blog/pourquoi-site-internet-agent-immobilier.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.creationsiteimmobilier.fr/blog/referencement-local-immobilier-google.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.creationsiteimmobilier.fr/blog/prix-site-internet-immobilier.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-
 
 </urlset>

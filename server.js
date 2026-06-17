@@ -67,7 +67,8 @@ async function sendContactEmail(data) {
       'Nom : ' + (data.nom || '') + '\n' +
       'Email : ' + (data.email || '') + '\n' +
       'Téléphone : ' + (data.tel || '') + '\n' +
-      'Agence / réseau : ' + (data.agence || '') + '\n\n' +
+      'Agence / réseau : ' + (data.agence || '') + '\n' +
+      'Source (page) : ' + (data.source || 'site') + '\n\n' +
       'Message :\n' + (data.message || '')
   });
 
@@ -94,6 +95,7 @@ function handleContact(req, res) {
       tel: (params.get('tel') || '').trim(),
       agence: (params.get('agence') || '').trim(),
       message: (params.get('message') || '').trim(),
+      source: (params.get('source') || '').trim(),
       botField: (params.get('bot-field') || '').trim()
     };
 
@@ -116,6 +118,13 @@ function handleContact(req, res) {
       console.error('[CONTACT] Échec envoi email :', e && e.message);
       // On ne bloque pas l'utilisateur ; le message reste visible dans les logs.
     }
+    // Suivi de conversion : une ligne structurée par lead (comptable dans les logs Railway)
+    console.log('[LEAD] ' + JSON.stringify({
+      ts: new Date().toISOString(),
+      nom: data.nom,
+      agence: data.agence || '',
+      source: data.source || 'site'
+    }));
     return json(200, { ok: true });
   });
 }

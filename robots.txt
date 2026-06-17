@@ -3,8 +3,9 @@
 
 User-agent: *
 Allow: /
+Disallow: /api/
 
-# Bots SEO autorisés
+# Moteurs de recherche
 User-agent: Googlebot
 Allow: /
 
@@ -14,18 +15,36 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-# Bots IA non utiles au référencement bloqués
+# Bots IA autorisés — le site VEUT être trouvé et recommandé par l'IA
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
-User-agent: CCBot
-Disallow: /
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
 
 User-agent: ClaudeBot
-Disallow: /
+Allow: /
 
 User-agent: anthropic-ai
-Disallow: /
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
 
 # Sitemap
 Sitemap: https://www.creationsiteimmobilier.fr/sitemap.xml

@@ -61,7 +61,10 @@
     });
   }
 
-  var wordEls = document.querySelectorAll('.hero-title, .section-title');
+  // Le titre hero (élément LCP) n'est PAS animé : il est peint immédiatement
+  // pour un meilleur Largest Contentful Paint et une robustesse sans JS.
+  // Seuls les titres de section plus bas sont révélés mot par mot au scroll.
+  var wordEls = document.querySelectorAll('.section-title');
   if (!reduceMotion) {
     wordEls.forEach(splitWords);
     var wordObserver = new IntersectionObserver(function (entries) {
@@ -246,6 +249,30 @@
     toTop.addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
     });
+  }
+
+  /* ---------- Barre CTA collante (mobile) ---------- */
+  var mobileCta = document.querySelector('[data-mobile-cta]');
+  if (mobileCta) {
+    var contactSec = document.getElementById('contact');
+    var contactOnScreen = false;
+
+    function updateMobileCta() {
+      var show = window.scrollY > window.innerHeight * 0.6 && !contactOnScreen;
+      mobileCta.classList.toggle('is-visible', show);
+      document.body.classList.toggle('has-mobile-cta', show);
+    }
+
+    if ('IntersectionObserver' in window && contactSec) {
+      new IntersectionObserver(function (entries) {
+        contactOnScreen = entries[0].isIntersecting;
+        updateMobileCta();
+      }, { threshold: 0.12 }).observe(contactSec);
+    }
+
+    window.addEventListener('scroll', updateMobileCta, { passive: true });
+    window.addEventListener('resize', updateMobileCta, { passive: true });
+    updateMobileCta();
   }
 
   /* ---------- Formulaire : validation + confirmation ---------- */

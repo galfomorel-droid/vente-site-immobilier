@@ -1592,3 +1592,87 @@ img, picture, source { max-width: 100%; height: auto; }
   /* Site reste en mode light — design Apple-like volontaire.
      Pas d'override forcé : on garde la cohérence éditoriale. */
 }
+
+/* =================================================================
+   CLIC-POUR-APPELER + BARRE CTA MOBILE (ajouts conversion)
+================================================================= */
+
+/* Téléphone sous le hero (fond clair) */
+.hero-phone {
+  margin: 20px 0 0;
+  font-size: 0.98rem;
+  color: var(--grey-600);
+}
+.hero-phone a {
+  color: var(--ink);
+  font-weight: 600;
+  border-bottom: 1px solid var(--grey-200);
+  transition: border-color 0.25s;
+  white-space: nowrap;
+}
+.hero-phone a:hover { border-color: var(--ink); }
+
+/* Alternative téléphone sous le formulaire (fond foncé) */
+.form-alt {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 6px 0 0;
+}
+.form-alt a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+
+/* Téléphone dans les blocs CTA des pages locales (fond clair) */
+.local-cta .local-cta-phone {
+  margin: 16px 0 0 !important;
+  font-size: 0.98rem !important;
+  color: var(--grey-600);
+}
+.local-cta .local-cta-phone a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+
+/* Barre d'action collante — mobile uniquement */
+.mobile-cta {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 125;
+  display: none;
+  gap: 10px;
+  padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  border-top: 1px solid var(--grey-200);
+  transform: translateY(110%);
+  transition: transform 0.4s var(--ease);
+}
+.mobile-cta .btn-pill {
+  flex: 1;
+  padding: 14px 18px;
+  font-size: 0.98rem;
+}
+
+@media (max-width: 720px) {
+  .mobile-cta { display: flex; }
+  .mobile-cta.is-visible { transform: translateY(0); }
+  /* Laisser respirer le bas de page quand la barre est visible */
+  body.has-mobile-cta { padding-bottom: 74px; }
+  /* Éviter le chevauchement avec le bouton « retour en haut » */
+  body.has-mobile-cta .to-top { bottom: 88px; }
+}
+
+@media print {
+  .mobile-cta { display: none !important; }
+}
