@@ -1,77 +1,40 @@
-# 🚀 Guide de mise en ligne sur Railway — creationsiteimmobilier.fr
+# 🚀 Mise en ligne sur GitHub Pages — creationsiteimmobilier.fr
 
-Tout est déjà préparé. Il te reste essentiellement à **te connecter** et à **lancer 3 commandes**.
-
----
-
-## ÉTAPE 1 — Réserver le nom de domaine (5 min)
-- Sur **ovh.com** (ou gandi.net), achète `creationsiteimmobilier.fr`.
-- Active l'adresse email **contact@creationsiteimmobilier.fr** (souvent incluse) — elle servira au formulaire.
+Le site est statique : GitHub Pages l'héberge gratuitement, et Web3Forms envoie
+les demandes du formulaire par email. Le code est déjà prêt (fichier `CNAME`, formulaire).
 
 ---
 
-## ÉTAPE 2 — Déployer sur Railway (10 min)
-
-Ouvre le **Terminal** (app macOS), puis copie-colle :
-
-**Le plus simple — un seul script :**
-```bash
-cd ~/Desktop/site-immobilier
-bash deploy-railway.sh
-```
-Il enchaîne connexion + création du projet + déploiement + URL publique.
-
-**Ou manuellement, commande par commande :**
-```bash
-cd ~/Desktop/site-immobilier
-npx @railway/cli login      # ➜ ouvre le navigateur : connecte-toi / crée ton compte
-npx @railway/cli init       # ➜ donne un nom au projet (ex. creationsiteimmobilier)
-npx @railway/cli up         # ➜ déploie : Railway installe et lance le serveur
-npx @railway/cli domain     # ➜ génère une URL publique (xxxx.up.railway.app)
-```
-
-➡️ Ton site est **en ligne** sur l'URL affichée. 🎉
-*(`npx` télécharge le CLI à la volée — aucune installation requise.)*
+## ÉTAPE 1 — Activer GitHub Pages (2 min)
+Sur github.com → dépôt **galfomorel-droid/vente-site-immobilier** → **Settings → Pages** :
+1. **Source** : *Deploy from a branch* → branche **main**, dossier **/ (root)** → **Save**.
+2. **Custom domain** : `www.creationsiteimmobilier.fr` → **Save**.
+3. Quand le certificat est prêt (quelques minutes après l'étape 2), cocher **Enforce HTTPS**.
 
 ---
 
-## ÉTAPE 3 — Recevoir les messages du formulaire par email (5 min)
-Sur **railway.app** → ton projet → onglet **Variables** → ajoute (valeurs dans `.env.example`) :
+## ÉTAPE 2 — Pointer le domaine chez OVH (5 min)
+OVH → **Noms de domaine → creationsiteimmobilier.fr → Zone DNS** :
+- Modifier l'entrée **CNAME** du sous-domaine **www** : cible `galfomorel-droid.github.io.`
+  (elle pointait vers Railway : `2f00140r.up.railway.app.`).
+- Domaine sans `www` : onglet **Redirection** → `creationsiteimmobilier.fr` vers
+  `https://www.creationsiteimmobilier.fr` (redirection permanente 301).
 
-| Variable | Exemple |
-|---|---|
-| `CONTACT_TO` | contact@creationsiteimmobilier.fr |
-| `CONTACT_FROM` | contact@creationsiteimmobilier.fr |
-| `SMTP_HOST` | ssl0.ovh.net |
-| `SMTP_PORT` | 465 |
-| `SMTP_USER` | contact@creationsiteimmobilier.fr |
-| `SMTP_PASS` | (mot de passe de l'email) |
-
-Railway redéploie tout seul. → Les demandes arrivent dans ta boîte mail.
-*(Sans ces variables, le site marche quand même ; les messages apparaissent dans les **logs Railway**.)*
+La propagation prend de quelques minutes à quelques heures.
 
 ---
 
-## ÉTAPE 4 — Brancher ton domaine + HTTPS (10 min)
-Sur Railway → ton service → **Settings → Networking → Custom Domain** :
-1. Saisis `creationsiteimmobilier.fr`.
-2. Railway donne un enregistrement **CNAME** → crée-le chez OVH (zone DNS).
-3. HTTPS 🔒 activé automatiquement.
+## ÉTAPE 3 — Recevoir les demandes du formulaire (2 min)
+1. Sur **web3forms.com**, saisir l'adresse email qui doit recevoir les demandes → la clé arrive par email.
+2. La coller dans `index.html`, champ `access_key` du formulaire `#contact-form`, puis publier.
 
 ---
 
-## ÉTAPE 5 — Personnaliser (à ton rythme)
-Dans `index.html` : ton téléphone, tes réseaux (LinkedIn/Insta/Facebook), les URL et captures des réalisations.
-Dans `mentions-legales.html` / `confidentialite.html` : remplace tout ce qui est surligné en jaune.
+## ÉTAPE 4 — Résilier Railway
+Le site n'utilise plus Railway : supprimer le projet sur railway.app pour éviter toute facturation.
 
 ---
 
-## ÉTAPE 6 — Référencement Google
+## ÉTAPE 5 — Référencement Google
 - **Search Console** → soumettre `sitemap.xml`.
-- **Google Business Profile** → créer ta fiche (référencement local).
-
----
-
-✅ **Étapes 1 + 2 = site en ligne.** Le reste se complète ensuite.
-
-> Astuce : un script `deploy-railway.sh` est inclus — lance `bash deploy-railway.sh` pour enchaîner login + init + up.
+- **Google Business Profile** → créer la fiche (référencement local).

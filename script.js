@@ -302,27 +302,46 @@
       }
 
       var btn = form.querySelector('button[type="submit"]');
-      if (btn) { btn.disabled = true; btn.textContent = 'Envoi…'; }
       if (formNote) { formNote.classList.remove('is-error'); formNote.textContent = formNoteDefault; }
 
-      var data = new URLSearchParams();
-      new FormData(form).forEach(function (value, key) { data.append(key, value); });
+      function showError(msg) {
+        if (btn) { btn.disabled = false; btn.textContent = 'Envoyer ma demande'; }
+        if (formNote) {
+          formNote.textContent = msg;
+          formNote.classList.add('is-error');
+        }
+      }
 
-      fetch(form.getAttribute('action') || '/api/contact', {
+      // Piège anti-spam rempli : on ne transmet rien (comportement identique pour le robot)
+      var botcheck = form.querySelector('[name="botcheck"]');
+      if (botcheck && botcheck.value) { showSuccess(); return; }
+
+      // Clé Web3Forms absente : jamais de faux succès, on oriente vers le téléphone
+      var accessKey = form.querySelector('[name="access_key"]');
+      if (!accessKey || !accessKey.value) {
+        showError("L'envoi en ligne est momentanément indisponible. Appelez-moi au 06 38 55 53 55 ou écrivez à contact@creationsiteimmobilier.fr.");
+        return;
+      }
+
+      if (btn) { btn.disabled = true; btn.textContent = 'Envoi…'; }
+
+      var payload = {};
+      new FormData(form).forEach(function (value, key) { payload[key] = value; });
+
+      fetch(form.getAttribute('action'), {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: data.toString()
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
       })
         .then(function (res) {
-          if (!res.ok) throw new Error('http ' + res.status);
-          showSuccess();
+          return res.json().then(function (json) {
+            // Succès uniquement si Web3Forms confirme l'envoi
+            if (!res.ok || !json.success) throw new Error(json.message || ('http ' + res.status));
+            showSuccess();
+          });
         })
         .catch(function () {
-          if (btn) { btn.disabled = false; btn.textContent = 'Envoyer ma demande'; }
-          if (formNote) {
-            formNote.textContent = "Une erreur est survenue. Réessayez ou écrivez-moi à contact@creationsiteimmobilier.fr.";
-            formNote.classList.add('is-error');
-          }
+          showError("Une erreur est survenue. Réessayez, ou appelez-moi au 06 38 55 53 55.");
         });
     });
   }

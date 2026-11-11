@@ -3,7 +3,6 @@
 
 User-agent: *
 Allow: /
-Disallow: /api/
 
 # Moteurs de recherche
 User-agent: Googlebot

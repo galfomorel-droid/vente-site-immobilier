@@ -828,11 +828,16 @@
           Merci ! Votre demande a bien été envoyée.<br />Je vous réponds personnellement sous 48 h.
         </p>
 
-        <form class="form" id="contact-form" method="POST" action="/api/contact"
+        <form class="form" id="contact-form" method="POST" action="https://api.web3forms.com/submit"
               aria-label="Formulaire de contact" data-reveal data-reveal-delay="1">
+          <!-- Envoi par Web3Forms (site statique) : clé d'accès publique à renseigner dans access_key -->
+          <input type="hidden" name="access_key" value="" />
+          <input type="hidden" name="subject" value="Nouvelle demande de devis — creationsiteimmobilier.fr" />
+          <input type="hidden" name="from_name" value="Site creationsiteimmobilier.fr" />
+          <input type="hidden" name="source" value="accueil" />
           <!-- Piège anti-spam (caché) -->
           <p class="hidden-field" aria-hidden="true">
-            <label>Ne pas remplir si vous êtes humain : <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+            <label>Ne pas remplir si vous êtes humain : <input name="botcheck" tabindex="-1" autocomplete="off" /></label>
           </p>
           <div class="field">
             <input type="text" id="nom" name="nom" autocomplete="name" placeholder=" " required />

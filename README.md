@@ -1,40 +1,20 @@
 # Création Site Immobilier — site vitrine
 
-Site vitrine (HTML/CSS/JS) servi par un petit serveur Node, avec un backend de formulaire
-de contact. Déployable sur **Railway** en quelques minutes.
+Site vitrine statique (HTML/CSS/JS), hébergé gratuitement sur **GitHub Pages**
+(domaine `www.creationsiteimmobilier.fr`, déclaré dans le fichier `CNAME`).
+Le formulaire de contact passe par **Web3Forms** : aucun serveur à maintenir.
 
-## Lancer en local
+## Aperçu en local
 ```bash
-npm install      # installe nodemailer (pour l'email du formulaire)
-npm start        # http://localhost:4173
+python3 -m http.server 4173   # puis http://localhost:4173
 ```
 
-## Déployer sur Railway
+## Publier une modification
+Commit + push sur la branche `main` (GitHub Desktop → « Push origin ») :
+GitHub Pages republie le site en 1 à 2 minutes.
 
-### Option A — Railway CLI (la plus rapide, sans GitHub)
-```bash
-bash deploy-railway.sh   # tout-en-un (login + init + up + domain)
-```
-Ou manuellement (npx, sans installation globale) :
-```bash
-npx @railway/cli login
-npx @railway/cli init
-npx @railway/cli up
-npx @railway/cli domain
-```
-
-### Option B — via GitHub
-1. Pousser ce dossier sur un dépôt GitHub.
-2. Sur railway.app : **New Project → Deploy from GitHub repo** → sélectionner le dépôt.
-3. Railway détecte Node, lance `npm install` puis `npm start`.
-
-## Recevoir les messages du formulaire par email
-Dans Railway → onglet **Variables**, ajouter (voir `.env.example`) :
-`CONTACT_TO`, `CONTACT_FROM`, `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`.
-
-Sans SMTP configuré, les messages restent visibles dans les **logs Railway**
-(le formulaire reste fonctionnel côté visiteur).
-
-## Domaine personnalisé
-Railway → **Settings → Domains → Custom Domain** → `creationsiteimmobilier.fr`,
-puis créer l'enregistrement DNS indiqué chez votre registrar (OVH/Gandi). HTTPS automatique.
+## Formulaire de contact
+Dans `index.html`, formulaire `#contact-form`, champ caché `access_key` :
+y coller la clé Web3Forms (gratuite, obtenue sur web3forms.com avec l'adresse
+qui doit recevoir les demandes). Sans clé, le formulaire affiche un message
+d'indisponibilité et renvoie vers le téléphone — jamais de faux succès.
